@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title th:text="'예약 확정 상세'">예약 확정 상세</title>
+    <link rel="stylesheet" th:href="@{/css/reserv_confirm_details.css}" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- 상단 앱 바 -->
+      <header class="app-bar" role="banner">
+        <button
+          class="icon-btn"
+          aria-label="뒤로가기"
+          type="button"
+          data-action="back"
+        >
+          ←
+        </button>
+        <h1 class="app-bar__title" th:text="'예약 확정 상세'">
+          예약 확정 상세
+        </h1>
+        <button
+          class="icon-btn"
+          aria-label="닫기"
+          type="button"
+          data-action="close"
+        >
+          ✕
+        </button>
+      </header>
+
+      <!-- 스크롤 가능한 본문 영역 -->
+      <main class="content" role="main">
+        <!-- 페이지 타이틀 및 예약 일시 -->
+        <section class="section section--headline">
+          <h2 class="headline" th:text="'확정된 예약 정보를 확인하세요.'">
+            확정된 예약 정보를 확인하세요.
+          </h2>
+          <div class="kv">
+            <div class="kv__key" th:text="'예약 확정 일시 :'">
+              예약 확정 일시 :
+            </div>
+            <div class="kv__value" th:text="'08/05/2023 15:01'">
+              08/05/2023 15:01
+            </div>
+          </div>
+        </section>
+
+        <!-- 예약 정보 -->
+        <section class="section">
+          <h3 class="section__title">
+            <span class="icon">🔖</span>
+            <span th:text="'예약 정보'">예약 정보</span>
+          </h3>
+          <ul class="list">
+            <li class="list__item">
+              <span class="list__label" th:text="'예약 번호'">예약 번호</span>
+              <span class="list__value" th:text="'1111111111'">1111111111</span>
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'예약 유형'">예약 유형</span>
+              <span class="list__value" th:text="'일반 예약'">일반 예약</span>
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'병원'">병원</span>
+              <span
+                class="list__value"
+                th:text="'프라람9 병원 (Praram9 Hospital) (☎ 01-123-456 )'"
+                >프라람9 병원 (Praram9 Hospital) (☎ 01-123-456 )</span
+              >
+            </li>
+            <li class="list__item list__item--multi">
+              <span class="list__label" th:text="'진료 예정 일시 · 의사'"
+                >진료 예정 일시 · 의사</span
+              >
+              <div class="list__value list__value--stack">
+                <div th:text="'10/05/2023 14:01-14:15'">
+                  10/05/2023 14:01-14:15
+                </div>
+                <div th:text="'Dr. Wittaya Wanpen'">Dr. Wittaya Wanpen</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 진료 정보 -->
+        <section class="section">
+          <h3 class="section__title">
+            <span class="icon">🩺</span>
+            <span th:text="'진료 정보'">진료 정보</span>
+          </h3>
+          <div class="subsection">
+            <div class="subsection__title">
+              <span class="icon">📌</span>
+              <span th:text="'주요 증상'">주요 증상</span>
+            </div>
+            <div
+              class="note"
+              th:text="'감기기운이 있고 머리가 아파요. 팔이 저려요. 숨 쉬기가 어려워요. 기침을 계속 해요'"
+            >
+              감기기운이 있고 머리가 아파요. 팔이 저려요. 숨 쉬기가 어려워요.
+              기침을 계속 해요
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection__title">
+              <span class="icon">🖼️</span>
+              <span th:text="'증상 이미지'">증상 이미지</span>
+            </div>
+            <div class="thumbs">
+              <div class="thumb" aria-label="증상 이미지 1"></div>
+              <div class="thumb" aria-label="증상 이미지 2"></div>
+              <div class="thumb" aria-label="증상 이미지 3"></div>
+              <div class="thumb" aria-label="증상 이미지 4"></div>
+              <div class="thumb" aria-label="증상 이미지 5"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 환자 정보 -->
+        <section class="section">
+          <h3 class="section__title">
+            <span class="icon">👤</span>
+            <span th:text="'환자 정보'">환자 정보</span>
+          </h3>
+
+          <ul class="list">
+            <li class="list__item">
+              <span class="list__label" th:text="'이름'">이름</span>
+              <span class="list__value" th:text="'홍길동'">홍길동</span>
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'Thai ID Number'"
+                >Thai ID Number</span
+              >
+              <span class="list__value" th:text="'0-0000-00000-00-0'"
+                >0-0000-00000-00-0</span
+              >
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'생년월일'">생년월일</span>
+              <span class="list__value" th:text="'14/04/1998'">14/04/1998</span>
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'성별'">성별</span>
+              <span class="list__value" th:text="'남자'">남자</span>
+            </li>
+            <li class="list__item">
+              <span class="list__label" th:text="'휴대폰 번호'"
+                >휴대폰 번호</span
+              >
+              <span class="list__value" th:text="'062-1234-1234'"
+                >062-1234-1234</span
+              >
+            </li>
+          </ul>
+
+          <button
+            class="toggle"
+            type="button"
+            id="togglePatientMore"
+            aria-expanded="false"
+          >
+            <span th:text="'상세 환자 정보 접기'">상세 환자 정보 접기</span>
+            <span class="chevron">⌃</span>
+          </button>
+
+          <div class="patient-more" id="patientMore" hidden>
+            <ul class="list">
+              <li class="list__item">
+                <span class="list__label" th:text="'키'">키</span>
+                <span class="list__value" th:text="'176 cm'">176 cm</span>
+              </li>
+              <li class="list__item">
+                <span class="list__label" th:text="'체중'">체중</span>
+                <span class="list__value" th:text="'65 kg'">65 kg</span>
+              </li>
+              <li class="list__item">
+                <span class="list__label" th:text="'혈액형'">혈액형</span>
+                <span class="list__value" th:text="'B'">B</span>
+              </li>
+              <li class="list__item list__item--multi">
+                <span class="list__label" th:text="'음주 (기준: 200ml, 1 week)'"
+                  >음주 (기준: 200ml, 1 week)</span
+                >
+                <div class="list__value list__value--stack">
+                  <div th:text="'1~2'">1~2</div>
+                </div>
+              </li>
+              <li class="list__item list__item--multi">
+                <span class="list__label" th:text="'흡연 (기준: 개피, 1 day)'"
+                  >흡연 (기준: 개피, 1 day)</span
+                >
+                <div class="list__value list__value--stack">
+                  <div th:text="'1~5'">1~5</div>
+                </div>
+              </li>
+              <li class="list__item list__item--multi">
+                <span class="list__label" th:text="'복용중인 약물'"
+                  >복용중인 약물</span
+                >
+                <div class="list__value list__value--stack">
+                  <div th:text="'3개월 전부터 탈모 약을 복용 중입니다.'">
+                    3개월 전부터 탈모 약을 복용 중입니다.
+                  </div>
+                </div>
+              </li>
+              <li class="list__item list__item--multi">
+                <span class="list__label" th:text="'개인력'">개인력</span>
+                <div class="list__value list__value--stack">
+                  <div
+                    th:text="'14살에 심장 수술을 받은 적이 있습니다. 17살에는 맹장수술을 받았습니다. 22살에는 다리가 부러져서 철심으로 고정하는 수술을 받았습니다.'"
+                  >
+                    14살에 심장 수술을 받은 적이 있습니다. 17살에는 맹장수술을
+                    받았습니다. 22살에는 다리가 부러져서 철심으로 고정하는
+                    수술을 받았습니다.
+                  </div>
+                </div>
+              </li>
+              <li class="list__item list__item--multi">
+                <span class="list__label" th:text="'가족력'">가족력</span>
+                <div class="list__value list__value--stack">
+                  <div
+                    th:text="'집안 대대로 심장병이 있습니다. 기관지가 좋지 않습니다. 유전병이 있습니다.'"
+                  >
+                    집안 대대로 심장병이 있습니다. 기관지가 좋지 않습니다.
+                    유전병이 있습니다.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 유의사항 -->
+        <section class="section">
+          <h3 class="section__title">
+            <span class="icon">ℹ️</span>
+            <span th:text="'유의사항'">유의사항</span>
+          </h3>
+          <ul class="notice">
+            <li
+              th:text="'예약 확정 상태에서는 진료 1시간 전까지 예약을 취소할 수 있어요.'"
+            >
+              예약 확정 상태에서는 진료 1시간 전까지 예약을 취소할 수 있어요.
+            </li>
+            <li
+              th:text="'예약 확정 상태에서 예약 유형을 변경할 수는 없어요. 예약 변경은 앱을 통해서만 가능합니다.'"
+            >
+              예약 확정 상태에서 예약 유형을 변경할 수는 없어요. 예약 변경은
+              앱을 통해서만 가능합니다.
+            </li>
+            <li th:text="'진료실 입장은 입장 예정 시각 10분전부터 가능합니다.'">
+              진료실 입장은 입장 예정 시각 10분전부터 가능합니다.
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- 하단 고정 영역 -->
+      <div class="bottom-cta" role="contentinfo">
+        <button
+          id="cancelReservation"
+          class="cta-button"
+          type="button"
+          th:text="'예약 취소'"
+        >
+          예약 취소
+        </button>
+      </div>
+    </div>
+
+    <script th:src="@{/js/reserv_confirm_details.js}"></script>
+  </body>
+</html>
