@@ -59,6 +59,11 @@ body {
   cursor: pointer;
 }
 
+.icon-img {
+  width: 24px;
+  height: 24px;
+}
+
 /* 스크롤 가능한 컨텐츠 */
 .content {
   flex: 1 1 auto;
@@ -105,6 +110,11 @@ body {
   gap: 6px;
 }
 
+.title-icon {
+  width: 18px;
+  height: 18px;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -134,6 +144,13 @@ body {
   font-size: 15px;
 }
 
+.label-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+
 .list__value--stack {
   display: flex;
   flex-direction: column;
@@ -151,6 +168,11 @@ body {
   margin-bottom: 8px;
   color: var(--muted);
   font-weight: 600;
+}
+
+.subsection__icon {
+  width: 16px;
+  height: 16px;
 }
 
 .note {
@@ -196,8 +218,12 @@ body {
   transition: transform 0.2s ease;
 }
 
-.patient-more[hidden] + .chevron,
-.toggle[aria-expanded="false"] .chevron {
+.chevron-img {
+  width: 18px;
+  height: 18px;
+}
+
+.toggle[aria-expanded="false"] .chevron-img {
   transform: rotate(180deg);
 }
 
