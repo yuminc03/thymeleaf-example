@@ -86,4 +86,13 @@ public class UserController {
         model.addAttribute("user", user);
         return "switch-case";
     }
+
+    // MARK: - Practice
+
+    // 예약 확정 상세
+    // http://localhost:8080/practice/reserv-confirm-details
+    @GetMapping("/practice/reserv-confirm-details")
+    public String reservConfirmDetails() {
+        return "reserv-confirm-details";
+    }
 }
